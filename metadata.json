@@ -1,0 +1,6 @@
+{
+  "name": "EcoBreath",
+  "description": "An AI environmental intelligence and weather application with real-time updates, air quality diagnostics, citizen report submissions, and push notifications.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
