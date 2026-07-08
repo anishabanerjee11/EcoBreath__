@@ -12,16 +12,16 @@ export default function LandingPage({ onOnboardComplete }: LandingPageProps) {
   const [showPassword, setShowPassword] = useState(false);
 
   // Form Fields
-  const [fullName, setFullName] = useState("Anisha Banerjee");
-  const [email, setEmail] = useState("anishabanerjee675@gmail.com");
-  const [mobile, setMobile] = useState("+91 98765 43210");
+  const [fullName, setFullName] = useState("Full Name");
+  const [email, setEmail] = useState("YourEmail@gmail.com");
+  const [mobile, setMobile] = useState("+91----------");
   const [city, setCity] = useState("Rourkela");
   const [password, setPassword] = useState("••••••••");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onOnboardComplete({
-      name: isSignUp ? fullName : "Anisha Banerjee",
+      name: isSignUp ? fullName : "User",
       city: city || "Rourkela",
     });
   };
