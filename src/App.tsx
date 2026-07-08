@@ -129,7 +129,7 @@ const DEFAULT_ALERTS = [
 ];
 
 const DEFAULT_USER_PROFILE = {
-  name: "Anisha Banerjee",
+  name: "User",
   level: 12,
   role: "Eco Guardian",
   impactScore: 92,
@@ -210,7 +210,7 @@ export default function App() {
         if (res.ok) {
           const payload = await res.json();
           setSyncData(payload);
-          if (payload.userProfile && user.name === "Anisha Banerjee") {
+          if (payload.userProfile && user.name === "User") {
             setUser({
               name: payload.userProfile.name,
               city: payload.userProfile.settings.liveLocation === "granted" ? "Rourkela" : "Rourkela",
@@ -249,7 +249,7 @@ export default function App() {
             case "INIT_SYNC":
               setSyncData(message.payload);
               // Set the default user profile from sync payload
-              if (message.payload.userProfile && user.name === "Anisha Banerjee") {
+              if (message.payload.userProfile && user.name === "User") {
                 setUser({
                   name: message.payload.userProfile.name,
                   city: message.payload.userProfile.settings.liveLocation === "granted" ? "Rourkela" : "Rourkela",
